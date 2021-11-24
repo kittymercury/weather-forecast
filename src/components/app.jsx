@@ -15,7 +15,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      query: '',
+      query: 'auto:ip',
       currentTemperature: '',
       days: 3,
       forecast: null,
@@ -74,20 +74,6 @@ export default class App extends React.Component {
     }
   }
 
-  renderDatalist = async () => {
-    const { search } = this.state;
-    if (!search) return;
-    return (
-      <datalist id="search">
-        {search.map((res) => {
-          return (
-            <option value={res.name} key={id} />
-            // console.log(res)
-          )
-        })}
-      </datalist>
-    )
-  }
 
   renderHeader = () => {
     return (
@@ -103,20 +89,6 @@ export default class App extends React.Component {
             onChange={this.handleChangeInputValue}
             onKeyUp={this.handleKeyUp}
           />
-          {this.renderDatalist()}
-          {/* {this.state.search
-            ? (
-                <datalist id="search">
-                  {this.state.search.map((res) => {
-                    return (
-                      // <option value={res.name} />
-                      console.log(res)
-                    )
-                  })}
-                </datalist>
-            )
-            : ''
-          } */}
         </form>
         <button className="search" onClick={this.handleClickSearch}>
           <i className="fas fa-search"></i>
