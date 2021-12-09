@@ -1,6 +1,5 @@
-# React Examples
+Weather forecast app, written with React, using free api from http://api.weatherapi.com.
+It shows forecast for 3 days (including today).
 
-**Running**:
-
-1. `sudo yarn start` - start application
-2. `sudo yarn build` - build application
+Click search button to see the forecast.
+https://kittymercury.github.io/weather-forecast/
