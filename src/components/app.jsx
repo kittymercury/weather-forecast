@@ -15,7 +15,7 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      query: 'auto:ip',
+      query: 'Vinnytsya',
       currentTemperature: '',
       days: 3,
       forecast: null,
